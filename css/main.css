@@ -1,0 +1,18 @@
+/* ==========================================================================
+   Main stylesheet — Entry point
+   Import order: base → components → sections
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+@import 'base.css';
+@import 'components.css';
+
+/* Sections */
+@import 'sections/header.css';
+@import 'sections/hero.css';
+@import 'sections/services.css';
+@import 'sections/contact-about.css';
+@import 'sections/cta-banner.css';
+@import 'sections/footer.css';
+@import 'sections/privacy.css';

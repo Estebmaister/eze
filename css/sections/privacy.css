@@ -1,0 +1,90 @@
+/* ==========================================================================
+   Section: Privacy policy page
+   ========================================================================== */
+
+.privacy-page {
+  padding-top: calc(var(--header-height) + var(--space-3xl));
+  padding-bottom: var(--space-4xl);
+  background: var(--color-gray-50);
+  min-height: 60vh;
+}
+
+.privacy-page__content {
+  max-width: 760px;
+  margin-inline: auto;
+  background: var(--color-white);
+  border-radius: var(--border-radius-lg);
+  padding: var(--space-3xl);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-gray-200);
+}
+
+.privacy-page__title {
+  font-size: var(--font-size-3xl);
+  font-weight: 700;
+  color: var(--color-navy);
+  margin-bottom: var(--space-sm);
+  line-height: var(--line-height-tight);
+}
+
+.privacy-page__updated {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-2xl);
+}
+
+.privacy-page__section {
+  margin-bottom: var(--space-xl);
+}
+
+.privacy-page__section h2 {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  color: var(--color-navy);
+  margin-bottom: var(--space-md);
+}
+
+.privacy-page__section p,
+.privacy-page__section li {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  line-height: 1.8;
+  margin-bottom: var(--space-md);
+}
+
+.privacy-page__section ul {
+  list-style: disc;
+  padding-left: var(--space-xl);
+  margin-bottom: var(--space-md);
+}
+
+.privacy-page__section a {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+.privacy-page__back {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: var(--space-xl);
+  transition: color var(--transition);
+}
+
+.privacy-page__back:hover {
+  color: var(--color-primary-dark);
+}
+
+.privacy-page__back svg {
+  width: 18px;
+  height: 18px;
+}
+
+@media (max-width: 768px) {
+  .privacy-page__content {
+    padding: var(--space-xl);
+  }
+}

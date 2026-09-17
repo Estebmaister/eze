@@ -1,0 +1,68 @@
+/* ==========================================================================
+   Section: CTA Banner
+   ========================================================================== */
+
+.cta-banner {
+  position: relative;
+  padding: var(--space-3xl) 0;
+  overflow: hidden;
+}
+
+.cta-banner__bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1600&q=80');
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.85);
+}
+
+.cta-banner__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(14, 58, 82, 0.85) 0%,
+    rgba(14, 58, 82, 0.6) 50%,
+    rgba(14, 58, 82, 0.4) 100%
+  );
+}
+
+.cta-banner__content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2xl);
+  flex-wrap: wrap;
+}
+
+.cta-banner__title {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  color: var(--color-white);
+  max-width: 480px;
+  line-height: var(--line-height-tight);
+}
+
+.cta-banner__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+}
+
+@media (max-width: 768px) {
+  .cta-banner__content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cta-banner__title {
+    max-width: 100%;
+  }
+
+  .cta-banner__actions {
+    justify-content: center;
+  }
+}
