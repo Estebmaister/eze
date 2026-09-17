@@ -129,4 +129,20 @@
   .header__cta {
     display: none;
   }
+
+  .nav__link {
+    font-size: var(--font-size-base);
+    padding: var(--space-sm) 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .logo {
+    font-size: var(--font-size-xs);
+  }
+
+  .logo__icon {
+    width: 30px;
+    height: 30px;
+  }
 }

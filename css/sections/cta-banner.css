@@ -53,16 +53,27 @@
 }
 
 @media (max-width: 768px) {
+  .cta-banner {
+    padding: var(--space-2xl) 0;
+  }
+
   .cta-banner__content {
     flex-direction: column;
     text-align: center;
+    gap: var(--space-xl);
   }
 
   .cta-banner__title {
     max-width: 100%;
+    font-size: var(--font-size-xl);
   }
 
   .cta-banner__actions {
-    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .cta-banner__actions .btn {
+    width: 100%;
   }
 }

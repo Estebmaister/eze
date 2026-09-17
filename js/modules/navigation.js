@@ -42,23 +42,41 @@ export function initNavigation() {
     });
   });
 
-  // Active link on scroll
+  // Active link on scroll — pick the most visible section
   const sectionIds = CONFIG.sections.map((s) => s.id);
   const sections = sectionIds
     .map((id) => document.getElementById(id))
     .filter(Boolean);
 
+  const headerHeight = header?.offsetHeight ?? 80;
+  const visibility = new Map();
+
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-        const id = entry.target.id;
-        navLinks.forEach((link) => {
-          link.classList.toggle('nav__link--active', link.dataset.section === id);
-        });
+        visibility.set(entry.target.id, entry.isIntersecting ? entry.intersectionRatio : 0);
+      });
+
+      let activeId = null;
+      let maxRatio = 0;
+
+      visibility.forEach((ratio, id) => {
+        if (ratio > maxRatio) {
+          maxRatio = ratio;
+          activeId = id;
+        }
+      });
+
+      if (!activeId) return;
+
+      navLinks.forEach((link) => {
+        link.classList.toggle('nav__link--active', link.dataset.section === activeId);
       });
     },
-    { rootMargin: '-40% 0px -50% 0px', threshold: 0 }
+    {
+      rootMargin: `-${headerHeight + 16}px 0px -45% 0px`,
+      threshold: [0, 0.1, 0.25, 0.5, 0.75, 1],
+    }
   );
 
   sections.forEach((section) => observer.observe(section));
