@@ -1,0 +1,159 @@
+/* ==========================================================================
+   Vida Plena — Base styles
+   ========================================================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --vp-primary: #3d8f7e;
+  --vp-primary-dark: #2f7365;
+  --vp-primary-light: #e8f3f0;
+  --vp-navy: #1c3d4a;
+  --vp-navy-dark: #142e38;
+  --vp-cream: #f9f7f4;
+  --vp-white: #ffffff;
+  --vp-text: #2c3e45;
+  --vp-text-muted: #5c6d75;
+  --vp-gold: #b8956c;
+
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Montserrat', system-ui, sans-serif;
+  --font-script: 'Dancing Script', cursive;
+
+  --font-size-xs: 0.7rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.35rem;
+  --font-size-2xl: 1.75rem;
+  --font-size-3xl: 2.25rem;
+  --font-size-4xl: 2.75rem;
+
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+  --space-4xl: 6rem;
+
+  --container-max: 1180px;
+  --container-padding: 1.5rem;
+  --header-height: 88px;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-pill: 50px;
+  --shadow-sm: 0 2px 12px rgba(28, 61, 74, 0.08);
+  --shadow-md: 0 8px 28px rgba(28, 61, 74, 0.12);
+  --transition: 0.25s ease;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--header-height);
+  font-size: 16px;
+}
+
+[id] {
+  scroll-margin-top: var(--header-height);
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: var(--font-size-sm);
+  line-height: 1.65;
+  color: var(--vp-text);
+  background: var(--vp-white);
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--container-padding);
+}
+
+.section-eyebrow {
+  display: block;
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--vp-primary);
+  margin-bottom: var(--space-sm);
+}
+
+.section-title {
+  font-family: var(--font-serif);
+  font-size: var(--font-size-3xl);
+  font-weight: 600;
+  color: var(--vp-navy);
+  line-height: 1.2;
+}
+
+.section-subtitle {
+  font-size: var(--font-size-sm);
+  color: var(--vp-text-muted);
+  max-width: 640px;
+  margin-inline: auto;
+  line-height: 1.75;
+}
+
+.script-accent {
+  font-family: var(--font-script);
+  font-size: var(--font-size-2xl);
+  color: var(--vp-primary);
+  line-height: 1.3;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --font-size-3xl: 1.85rem;
+    --font-size-4xl: 2.1rem;
+    --header-height: 72px;
+    --container-padding: 1.15rem;
+  }
+}

@@ -1,0 +1,116 @@
+/* ==========================================================================
+   Vida Plena — Components
+   ========================================================================== */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  padding: 0.85rem 1.75rem;
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  border-radius: var(--radius-pill);
+  border: 2px solid transparent;
+  transition: transform var(--transition), box-shadow var(--transition), background var(--transition);
+  white-space: nowrap;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn--primary {
+  background: var(--vp-primary);
+  color: var(--vp-white);
+  border-color: var(--vp-primary);
+}
+
+.btn--primary:hover {
+  background: var(--vp-primary-dark);
+  border-color: var(--vp-primary-dark);
+}
+
+.btn--white {
+  background: var(--vp-white);
+  color: var(--vp-navy);
+  border-color: var(--vp-white);
+}
+
+.btn--outline-white {
+  background: transparent;
+  color: var(--vp-white);
+  border-color: var(--vp-white);
+}
+
+.btn--outline-white:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.btn__icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.logo__icon {
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+}
+
+.logo__text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.logo__name {
+  font-family: var(--font-serif);
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--vp-navy);
+  letter-spacing: 0.04em;
+  line-height: 1.1;
+}
+
+.logo__tagline {
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--vp-text-muted);
+}
+
+.logo--light .logo__name {
+  color: var(--vp-white);
+}
+
+.logo--light .logo__tagline {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Check list */
+.check-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-sm);
+  font-size: 0.8rem;
+  color: var(--vp-text-muted);
+  margin-bottom: var(--space-xs);
+}
+
+.check-list li::before {
+  content: '✓';
+  color: var(--vp-primary);
+  font-weight: 700;
+  flex-shrink: 0;
+}

@@ -9,6 +9,7 @@ Sitio web estático para el consultorio de fisioterapia de Ezequiel en Cancún, 
 | Página | Archivo | Descripción |
 |--------|---------|-------------|
 | Inicio | `index.html` | Landing page con servicios, contacto y sobre mí |
+| Vida Plena | `vida_plena/` | Retiros de salud y bienestar — clínica premium |
 | Aviso de privacidad | `aviso-de-privacidad.html` | Política de tratamiento de datos (LFPDPPP) |
 
 ## Estructura del proyecto

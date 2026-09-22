@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600&family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+@import 'base.css';
+@import 'components.css';
+@import 'sections/header.css';
+@import 'sections/hero.css';
+@import 'sections/features.css';
+@import 'sections/treatments.css';
+@import 'sections/team.css';
+@import 'sections/facilities.css';
+@import 'sections/cta.css';
+@import 'sections/footer.css';
