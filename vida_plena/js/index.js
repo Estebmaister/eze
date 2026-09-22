@@ -1,6 +1,6 @@
 import { initNavigation } from './modules/navigation.js';
 import { renderTreatments, renderTeam, renderFacilities } from './modules/render.js';
-import { initWhatsApp } from './modules/whatsapp.js';
+import { initWhatsApp, initSocialLinks } from './modules/whatsapp.js';
 
 function init() {
   renderTreatments();
@@ -8,6 +8,7 @@ function init() {
   renderFacilities();
   initNavigation();
   initWhatsApp();
+  initSocialLinks();
 }
 
 document.addEventListener('DOMContentLoaded', init);

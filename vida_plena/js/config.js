@@ -4,6 +4,11 @@ export const CONFIG = {
     defaultMessage: 'Hola, me interesa reservar un retiro en Vida Plena.',
   },
 
+  social: {
+    instagram: 'https://www.instagram.com/ezetal',
+    facebook: 'https://www.facebook.com/Toquessdesalud',
+  },
+
   sections: [
     { id: 'inicio', label: 'Inicio' },
     { id: 'nuestro-retiro', label: 'Nuestro Retiro' },
